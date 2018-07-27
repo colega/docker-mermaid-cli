@@ -1,4 +1,4 @@
-FROM node:9.5.0-alpine
+FROM node:10.7.0-alpine
 
 # Create /data dir where files can be read/written.
 ENV \
