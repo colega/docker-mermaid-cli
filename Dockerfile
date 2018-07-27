@@ -16,8 +16,10 @@ RUN set -ex \
         nss@edge \
     && rm -rf /tmp/* /var/cache/apk/*
 
-# Puppeteer v0.11.0 works with Chromium 63.
-RUN yarn add puppeteer@0.11.0 mermaid.cli@0.5.1
+RUN /usr/bin/chromium-browser --version 
+
+# Puppeteer v0.13.0 works with Chromium 64.
+RUN yarn add puppeteer@0.13.0 mermaid.cli@0.5.1
 
 RUN mkdir /cfg
 ADD puppeteer.json /cfg/puppeteer.json
